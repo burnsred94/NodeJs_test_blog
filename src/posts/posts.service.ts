@@ -11,8 +11,6 @@ export class PostsService {
 
   async createPost(dto: CreatePostDto): Promise<Posts> {
     const post = await this.postRepository.create(dto);
-
-    // await post.$set('Posts',[user.id])
     return post;
   }
 
